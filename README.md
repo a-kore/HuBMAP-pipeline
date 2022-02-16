@@ -2,12 +2,10 @@
 Pytorch Lightning training pipeline of semantic segmentation model for the identification of glomeruli in human kidney tissue slides.
 
 ## Training
-***
 Training is executed by running the ```run_experiments.sh``` script which calls ```swm.py``` with a default set of hyperparameters.
 
 
 ## Results
-***
 **DICE score**: ***0.96090***
 
 Tissue slides:
