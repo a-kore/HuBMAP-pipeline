@@ -2,7 +2,6 @@ import torch
 import pytorch_lightning as pl
 from pytorch_lightning.loggers import TensorBoardLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
-from u2net import U2NETP
 import torch.nn.functional as F
 from argparse import ArgumentParser
 from torchvision.utils import make_grid
@@ -26,7 +25,6 @@ class U2Net(pl.LightningModule):
         self.lr = lr
         self.weight_decay = weight_decay
 
-        # self.model = U2NETP(in_ch=in_ch, out_ch=out_ch)
         self.model = smp.Unet(
             encoder_name="efficientnet-b4",  # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
             encoder_weights="imagenet",  # use `imagenet` pre-trained weights for encoder initialization
